@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+
+<!--
+License: Apache 2.0. See LICENSE file in root directory.
+Copyright(c) 2017 Intel Corporation. All Rights Reserved
+
+This is the URDF model for the Intel RealSense 430 camera, in its
+aluminum peripherial evaluation case.
+-->
+
+<robot name="camera_frame" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="camera_frame" params="parent *origin name:=camera_frame">
+
+    <joint name="${name}top_pole_joint" type="fixed">
+      <parent link="${parent}"/>
+      <child link="${name}top_link"/>
+      <origin xyz="0.0 0.0 2.0" rpy="0 0 0"/>
+  </joint>
+    
+    <link name="${name}top_link" >
+        <visual>
+            <origin rpy="0 0 1.570796" xyz="0 0 0"/>
+            <geometry>
+                <!-- <mesh filename="package://rdv_3d_mapping_camera/meshes/ASSY_BEER_RANGE_360_angle.stl" scale=".0254 .0254 .0254"/> -->
+                <mesh filename="package://rdv_3d_mapping_camera/meshes/ASSY_BEER_RANGE_360_angle.stl" />
+            </geometry>
+        </visual>
+    </link>
+
+<joint name="${name}camera_00_joint" type="fixed">
+    <parent link="${name}top_link"/>
+    <child link="${name}camera_00_pose_link"/>
+    <origin xyz="0.068550 0.000000 0.04930" rpy="1.57 0.5235986666666667 0.000000"/>
+</joint>
+<link name="${name}camera_00_pose_link" />
+
+<joint name="${name}camera_01_joint" type="fixed">
+    <parent link="${name}top_link"/>
+    <child link="${name}camera_01_pose_link"/>
+    <origin xyz="0.055458 0.040293 0.04930" rpy="1.57 0.5235986666666667 0.628318"/>
+</joint>
+<link name="${name}camera_01_pose_link" />
+
+<joint name="${name}camera_02_joint" type="fixed">
+    <parent link="${name}top_link"/>
+    <child link="${name}camera_02_pose_link"/>
+    <origin xyz="0.021183 0.065195 0.04930" rpy="1.57 0.5235986666666667 1.256637"/>
+</joint>
+<link name="${name}camera_02_pose_link" />
+
+<joint name="${name}camera_03_joint" type="fixed">
+    <parent link="${name}top_link"/>
+    <child link="${name}camera_03_pose_link"/>
+    <origin xyz="-0.021183 0.065195 0.04930" rpy="1.57 0.5235986666666667 1.884955"/>
+</joint>
+<link name="${name}camera_03_pose_link" />
+
+<joint name="${name}camera_04_joint" type="fixed">
+    <parent link="${name}top_link"/>
+    <child link="${name}camera_04_pose_link"/>
+    <origin xyz="-0.055458 0.040293 0.04930" rpy="1.57 0.5235986666666667 2.513274"/>
+</joint>
+<link name="${name}camera_04_pose_link" />
+
+<joint name="${name}camera_05_joint" type="fixed">
+    <parent link="${name}top_link"/>
+    <child link="${name}camera_05_pose_link"/>
+    <origin xyz="-0.068550 0.000000 0.04930" rpy="1.57 0.5235986666666667 3.141592"/>
+</joint>
+<link name="${name}camera_05_pose_link" />
+
+<joint name="${name}camera_06_joint" type="fixed">
+    <parent link="${name}top_link"/>
+    <child link="${name}camera_06_pose_link"/>
+    <origin xyz="-0.055458 -0.040293 0.04930" rpy="1.57 0.5235986666666667 3.769910"/>
+</joint>
+<link name="${name}camera_06_pose_link" />
+
+<joint name="${name}camera_07_joint" type="fixed">
+    <parent link="${name}top_link"/>
+    <child link="${name}camera_07_pose_link"/>
+    <origin xyz="-0.021183 -0.065195 0.04930" rpy="1.57 0.5235986666666667 4.398229"/>
+</joint>
+<link name="${name}camera_07_pose_link" />
+
+<joint name="${name}camera_08_joint" type="fixed">
+    <parent link="${name}top_link"/>
+    <child link="${name}camera_08_pose_link"/>
+    <origin xyz="0.021183 -0.065195 0.04930" rpy="1.57 0.5235986666666667 5.026547"/>
+</joint>
+<link name="${name}camera_08_pose_link" />
+
+<joint name="${name}camera_09_joint" type="fixed">
+    <parent link="${name}top_link"/>
+    <child link="${name}camera_09_pose_link"/>
+    <origin xyz="0.055458 -0.040293 0.04930" rpy="1.57 0.5235986666666667 5.654866"/>
+</joint>
+<link name="${name}camera_09_pose_link" />
+
+    <xacro:sensor_d435 parent="${name}camera_00_pose_link" name="camera_00" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
+        <origin xyz="0.01015 0 -0.0125" rpy="0 0 0"/>
+      </xacro:sensor_d435>
+
+      <xacro:sensor_d435 parent="${name}camera_01_pose_link" name="camera_01" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
+        <origin xyz="0.01015 0 -0.0125" rpy="0 0 0"/>
+      </xacro:sensor_d435>
+
+      <xacro:sensor_d435 parent="${name}camera_02_pose_link" name="camera_02" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
+        <origin xyz="0.01015 0 -0.0125" rpy="0 0 0"/>
+      </xacro:sensor_d435>
+
+      <xacro:sensor_d435 parent="${name}camera_03_pose_link" name="camera_03" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
+        <origin xyz="0.01015 0 -0.0125" rpy="0 0 0"/>
+      </xacro:sensor_d435>
+
+      <xacro:sensor_d435 parent="${name}camera_04_pose_link" name="camera_04" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
+        <origin xyz="0.01015 0 -0.0125" rpy="0 0 0"/>
+      </xacro:sensor_d435>
+
+      <xacro:sensor_d435 parent="${name}camera_05_pose_link" name="camera_05" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
+        <origin xyz="0.01015 0 -0.0125" rpy="0 0 0"/>
+      </xacro:sensor_d435>
+
+      <xacro:sensor_d435 parent="${name}camera_06_pose_link" name="camera_06" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
+        <origin xyz="0.01015 0 -0.0125" rpy="0 0 0"/>
+      </xacro:sensor_d435>
+
+      <xacro:sensor_d435 parent="${name}camera_07_pose_link" name="camera_07" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
+        <origin xyz="0.01015 0 -0.0125" rpy="0 0 0"/>
+      </xacro:sensor_d435>
+
+      <xacro:sensor_d435 parent="${name}camera_08_pose_link" name="camera_08" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
+        <origin xyz="0.01015 0 -0.0125" rpy="0 0 0"/>
+      </xacro:sensor_d435>
+
+      <xacro:sensor_d435 parent="${name}camera_09_pose_link" name="camera_09" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
+        <origin xyz="0.01015 0 -0.0125" rpy="0 0 0"/>
+      </xacro:sensor_d435>
+
+  </xacro:macro>
+</robot>

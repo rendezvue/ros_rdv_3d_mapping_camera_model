@@ -38,5 +38,30 @@ int main(void)
 	
 	fclose (pFile);
 
+	////
+	pFile = fopen ("camera_pose_info2.txt","w");
+
+	index = 0 ;
+	for( double degree=0 ; degree<360 ; degree+=inter_degree )
+	{
+		double radian = degree * (3.141592/180.0) ;
+		double cos_ = cos(radian) ;
+		double sin_ = sin(radian) ;
+
+		float x = r * cos_ ;
+		float y = r * sin_ ;
+		float yaw = inter_radian*index ;
+
+		fprintf(pFile, "<link name=\"camera_%02d_link\" parent=\"top_link\">\n", index) ;
+		fprintf(pFile, "    <origin xyz=\"%f %f 0.04930\" rpy=\"1.57 0.5235986666666667 %f\"/>\n", x, y, yaw) ;
+		fprintf(pFile, "</link>\n") ;
+		fprintf(pFile, "\n") ;
+		
+      	index++ ;
+	}
+
+	
+	fclose (pFile);
+
 	return 0 ;
 }
