@@ -1,0 +1,70 @@
+<joint name="camera_00_joint" type="fixed">
+    <parent link="top_link"/>
+    <child link="camera_00_pose_link"/>
+    <origin xyz="0.068550 0.000000 0.04930" rpy="1.57 0.5235986666666667 0.000000"/>
+</joint>
+<link name="camera_00_pose_link" />
+
+<joint name="camera_01_joint" type="fixed">
+    <parent link="top_link"/>
+    <child link="camera_01_pose_link"/>
+    <origin xyz="0.055458 0.040293 0.04930" rpy="1.57 0.5235986666666667 0.628318"/>
+</joint>
+<link name="camera_01_pose_link" />
+
+<joint name="camera_02_joint" type="fixed">
+    <parent link="top_link"/>
+    <child link="camera_02_pose_link"/>
+    <origin xyz="0.021183 0.065195 0.04930" rpy="1.57 0.5235986666666667 1.256637"/>
+</joint>
+<link name="camera_02_pose_link" />
+
+<joint name="camera_03_joint" type="fixed">
+    <parent link="top_link"/>
+    <child link="camera_03_pose_link"/>
+    <origin xyz="-0.021183 0.065195 0.04930" rpy="1.57 0.5235986666666667 1.884955"/>
+</joint>
+<link name="camera_03_pose_link" />
+
+<joint name="camera_04_joint" type="fixed">
+    <parent link="top_link"/>
+    <child link="camera_04_pose_link"/>
+    <origin xyz="-0.055458 0.040293 0.04930" rpy="1.57 0.5235986666666667 2.513274"/>
+</joint>
+<link name="camera_04_pose_link" />
+
+<joint name="camera_05_joint" type="fixed">
+    <parent link="top_link"/>
+    <child link="camera_05_pose_link"/>
+    <origin xyz="-0.068550 0.000000 0.04930" rpy="1.57 0.5235986666666667 3.141592"/>
+</joint>
+<link name="camera_05_pose_link" />
+
+<joint name="camera_06_joint" type="fixed">
+    <parent link="top_link"/>
+    <child link="camera_06_pose_link"/>
+    <origin xyz="-0.055458 -0.040293 0.04930" rpy="1.57 0.5235986666666667 3.769910"/>
+</joint>
+<link name="camera_06_pose_link" />
+
+<joint name="camera_07_joint" type="fixed">
+    <parent link="top_link"/>
+    <child link="camera_07_pose_link"/>
+    <origin xyz="-0.021183 -0.065195 0.04930" rpy="1.57 0.5235986666666667 4.398229"/>
+</joint>
+<link name="camera_07_pose_link" />
+
+<joint name="camera_08_joint" type="fixed">
+    <parent link="top_link"/>
+    <child link="camera_08_pose_link"/>
+    <origin xyz="0.021183 -0.065195 0.04930" rpy="1.57 0.5235986666666667 5.026547"/>
+</joint>
+<link name="camera_08_pose_link" />
+
+<joint name="camera_09_joint" type="fixed">
+    <parent link="top_link"/>
+    <child link="camera_09_pose_link"/>
+    <origin xyz="0.055458 -0.040293 0.04930" rpy="1.57 0.5235986666666667 5.654866"/>
+</joint>
+<link name="camera_09_pose_link" />
+
