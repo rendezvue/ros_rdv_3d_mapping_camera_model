@@ -1,5 +1,5 @@
 <launch>
-    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find rdv_3d_mapping_camera)/urdf/rdv_3d_mapping_camera.urdf.xacro' use_nominal_extrinsics:=true add_plug:=true" />
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find rdv_3d_mapping_camera)/urdf/rdv_3d_mapping_camera.urdf.xacro' use_nominal_extrinsics:=true add_plug:=false" />
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
     <arg name="gui" default="True" />
