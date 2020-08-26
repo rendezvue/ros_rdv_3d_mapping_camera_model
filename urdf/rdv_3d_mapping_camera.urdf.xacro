@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <robot name="rdv_3d_mapping_camera" xmlns:xacro="http://ros.org/wiki/xacro">
   
-  <xacro:arg name="use_nominal_extrinsics" default="false"/>
-  <xacro:include filename="$(find rdv_3d_mapping_camera)/urdf/_d435.urdf.xacro" />
   <xacro:include filename="$(find rdv_3d_mapping_camera)/urdf/_3d_mapping_camera_frame.urdf.xacro" />
 
 <!--
@@ -32,16 +30,24 @@
   <link name="pole_link" parent="base_pole_joint" >
       <visual>
           <geometry>
-              <cylinder length="2.0" radius="0.015"/>
+              <cylinder length="1.5" radius="0.015"/>
           </geometry>
-          <origin rpy="0 0 0" xyz="0 0 1.0"/>
+          <origin rpy="0 0 0" xyz="0 0 0.75"/>
           <material name="red">
               <color rgba="1 0 0 1"/>
           </material>
       </visual>
   </link>
-  
-    <xacro:camera_frame parent="pole_link" name="camera_frame">
+
+  <joint name="camera_pole_joint" type="fixed">
+      <parent link="pole_link"/>
+      <child link="camera_frame_link"/>
+      <origin xyz="0.0 0.0 1.5" rpy="0 0 0"/>
+  </joint>
+
+  <link name="camera_frame_link" />
+
+    <xacro:camera_frame parent="camera_frame_link" name="camera_frame">
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </xacro:camera_frame>
 
