@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>rdv_3d_mapping_camera_model</name>
+  <name>ros_rdv_3d_mapping_camera_model</name>
   <version>0.0.0</version>
-  <description>The rdv_3d_mapping_camera_model package</description>
+  <description>The ros_rdv_3d_mapping_camera_model package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
