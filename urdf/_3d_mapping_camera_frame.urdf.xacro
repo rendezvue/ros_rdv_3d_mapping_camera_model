@@ -11,7 +11,7 @@ aluminum peripherial evaluation case.
 <robot name="camera_frame" xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:arg name="use_nominal_extrinsics" default="false"/>
   <xacro:arg name="add_plug" default="false"/>
-  <xacro:include filename="$(find rdv_3d_mapping_camera)/urdf/_d435.urdf.xacro" />
+  <xacro:include filename="$(find ros_rdv_3d_mapping_camera_model)/urdf/_d435.urdf.xacro" />
   
   <xacro:macro name="camera_frame" params="parent *origin name:=camera_frame">
 

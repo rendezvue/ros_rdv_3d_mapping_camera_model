@@ -10,8 +10,8 @@ aluminum peripherial evaluation case.
 
 <robot name="sensor_d435" xmlns:xacro="http://ros.org/wiki/xacro">
   <!-- Includes -->
-  <xacro:include filename="$(find rdv_3d_mapping_camera)/urdf/_materials.urdf.xacro" />
-  <xacro:include filename="$(find rdv_3d_mapping_camera)/urdf/_usb_plug.urdf.xacro" />
+  <xacro:include filename="$(find ros_rdv_3d_mapping_camera_model)/urdf/_materials.urdf.xacro" />
+  <xacro:include filename="$(find ros_rdv_3d_mapping_camera_model)/urdf/_usb_plug.urdf.xacro" />
 
   <xacro:macro name="sensor_d435" params="parent *origin name:=camera use_nominal_extrinsics:=false">
     <xacro:property name="M_PI" value="3.1415926535897931" />

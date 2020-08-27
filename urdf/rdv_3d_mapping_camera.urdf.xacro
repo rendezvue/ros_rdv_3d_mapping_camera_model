@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="rdv_3d_mapping_camera" xmlns:xacro="http://ros.org/wiki/xacro">
   
-  <xacro:include filename="$(find rdv_3d_mapping_camera)/urdf/_3d_mapping_camera_frame.urdf.xacro" />
+  <xacro:include filename="$(find ros_rdv_3d_mapping_camera_model)/urdf/_3d_mapping_camera_frame.urdf.xacro" />
 
 <!--
   <link name="base_link" />
