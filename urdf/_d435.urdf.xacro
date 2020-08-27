@@ -62,7 +62,7 @@ aluminum peripherial evaluation case.
         <origin xyz="${d435_zero_depth_to_glass + d435_glass_to_front} ${-d435_cam_depth_py} 0" rpy="${M_PI/2} 0 ${M_PI/2}"/>
         <geometry>
           <!-- <box size="${d435_cam_width} ${d435_cam_height} ${d435_cam_depth}"/> -->
-	        <mesh filename="package://rdv_3d_mapping_camera/meshes/d435.dae" />
+	        <mesh filename="package://ros_rdv_3d_mapping_camera_model/meshes/d435.dae" />
         </geometry>
       </visual>
       <collision>
