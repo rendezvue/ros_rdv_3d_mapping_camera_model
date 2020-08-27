@@ -26,7 +26,7 @@ aluminum peripherial evaluation case.
             <origin rpy="0 0 1.570796" xyz="0 0 0"/>
             <geometry>
                 <!-- <mesh filename="package://rdv_3d_mapping_camera/meshes/ASSY_BEER_RANGE_360_angle.stl" scale=".0254 .0254 .0254"/> -->
-                <mesh filename="package://rdv_3d_mapping_camera/meshes/ASSY_BEER_RANGE_360_angle.stl" />
+                <mesh filename="package://ros_rdv_3d_mapping_camera_model/meshes/ASSY_BEER_RANGE_360_angle.stl" />
             </geometry>
 
             <material name="aluminum">
